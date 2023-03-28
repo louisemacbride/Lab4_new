@@ -4,4 +4,52 @@
   <artifactId>Lab4_chatgpt</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Lab4_chatgpt</name>
+
+<properties>
+ <maven.compiler.source>1.9</maven.compiler.source>
+ <maven.compiler.target>1.9</maven.compiler.target>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<maven.compiler.release>17</maven.compiler.release>
+</properties>
+
+
+
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.21.0</version>
+<configuration>
+  <includes>
+    <include>Numbers_test.java</include>
+  </includes>
+</configuration>
+ <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.2.0-M1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.junit.jupiter</groupId>
+                        <artifactId>junit-jupiter-engine</artifactId>
+                        <version>5.2.0-M1</version>
+                    </dependency>
+                </dependencies>
+
+</plugin>
+</plugins>
+</build>
+<dependencies>
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.12</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+
+
 </project>
+
